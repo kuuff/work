@@ -1,10 +1,8 @@
 <# batch file posh loader
 @cls
-@echo off
-
-powershell.exe -command "start powershell -ArgumentList ""-command """"""iex ([System.IO.File]::ReadAllText('%0'))"""""""""""
-
-goto :EOF
+@powershell.exe -command "iex ([System.IO.File]::ReadAllText('%0'))"
+:: @pause
+@goto :EOF
 #>
 
 if(test-path("./parts")) { rd -Force -Recurse "./parts" }
