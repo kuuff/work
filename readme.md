@@ -13,4 +13,4 @@
 
 - `./book_split.bat` - разделяет книгу `./hpmor_ru.md` на главы и кладет в `./parts`.
 - `./book_join.bat` - соединяет главы из `./parts` в книгу `./hpmor_ru_joined.md`.
-- `./book_export` - экспортирует книгу `./hpmor_ru.md` из формата *markdown* в epub/fb2/html/docx и т.д.
+- `./book_export.bat` - экспортирует книгу `./hpmor_ru.md` из формата *markdown* в **epub/fb2/html/docx** и т.д.
