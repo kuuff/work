@@ -9,11 +9,12 @@ if(test-path("./hpmor_ru_joined.md")) {
 	del "./hpmor_ru_joined.md"
 }
 
-dir "./parts" | sort { $_.FullName } | 
+dir "./parts" -filter "*.md" |
+sort { $_.FullName } | 
 foreach {
 	$_.Name
-	$content = get-content $_.FullName
-	$content >> "./hpmor_ru_joined.md"
+	$content = get-content -Encoding "UTF8" $_.FullName
+	add-content -Encoding "UTF8" -Value $content -Path "./hpmor_ru_joined.md"
 }
 
 "Joined! Press ENTER to finish."
